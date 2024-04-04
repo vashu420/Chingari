@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turf Booking System</title>
+</head>
+<body>
+    <video id="video-background" autoplay loop muted>
+        <source src="{% static 'videos/1.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <div class="container">
+        <h2>Welcome to Chingari Stadium</h2>
+        <form id="loginForm" class="text-center">
+            <label for="loginName">Name:</label>
+            <input type="text" id="loginName" name="loginName" required>
+
+            <label for="loginPhoneNumber">Phone Number:</label>
+            <input type="tel" id="loginPhoneNumber" name="loginPhoneNumber" required placeholder="e.g., 123-456-7890">
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>
